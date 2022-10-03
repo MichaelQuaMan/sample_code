@@ -21,6 +21,9 @@ class NearestNeighborIndex:
         }
 
     def make_kdtree_index(self):
+        """Uses 3rd party K-d tree lib data structure for fastest benchmark.
+        Found: https://github.com/stefankoegl/kdtree
+        """
         self.tree = kdtree.create(self.points)
 
     def find_nearest_slow(self, query_point):
@@ -38,7 +41,9 @@ class NearestNeighborIndex:
         return min_point
 
     def find_nn_fastest(self, query_point):
-        """Use 3rd party kdtree lib for fast benchmark."""
+        """Uses 3rd party kdtree lib for fast benchmark.
+        Found: https://github.com/stefankoegl/kdtree
+        """
         return self.tree.search_nn(query_point)
 
     def find_nearest(self, query_point, mode="slow"):
