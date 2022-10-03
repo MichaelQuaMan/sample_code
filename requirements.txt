@@ -1,0 +1,10 @@
+certifi==2022.9.14
+coloredlogs==15.0.1
+humanfriendly==10.0
+kdtree==0.16
+pip==22.1.2
+pyreadline3==3.4.1
+PyYAML==6.0
+setuptools==63.4.1
+wheel==0.37.1
+wincertstore==0.2
