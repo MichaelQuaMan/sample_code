@@ -35,7 +35,6 @@ class BinSpace:
         self.abs_length = abs(length[0] - length[1])
         self.abs_width = abs(width[0] - width[1])
         self.area = self.abs_length * self.abs_width
-        self.bins = []
         self.bin_map = {}
         self.bin_sizes = sizes
         self.points = points
