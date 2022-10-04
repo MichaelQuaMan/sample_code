@@ -2,7 +2,7 @@ import unittest
 
 from my_nn.nn import BinSpace
 from my_nn.point import Point
-from tests.fixtures.expected import expected_03, expected_04
+from tests.fixtures.expected import expected_03, expected_04, expected_05
 from tests.fixtures.test_points import many_index_points
 
 
@@ -73,7 +73,18 @@ class TestBinSpace(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_get_bins_with_points(self):
-        self.assertEqual(True, False)
+        self.space = BinSpace(length=(-1000, 1000), width=(-1000, 1000), points=self.point_in_all_regions)
+        self.space.make_bins()
+        self.assertEqual(100, len(self.space.bin_map))
+        actual = self.space.get_bins_with_points()
+        expected = []
+        self.assertEqual(expected, actual)
+        self.space.place_points()
+        actual = self.space.get_bins_with_points()
+        self.assertEqual(100, len(actual))
+        actual = [i.coord for i in actual]
+        expected = expected_05
+        self.assertEqual(expected, actual)
 
     def test_find_nearest(self):
         self.assertEqual(True, False)
