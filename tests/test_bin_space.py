@@ -86,26 +86,26 @@ class TestBinSpace(unittest.TestCase):
         expected = expected_05
         self.assertEqual(expected, actual)
 
-    def test_find_nearest(self):
-        self.assertEqual(True, False)
-
-    def test_get_total_points(self):
-        self.assertEqual(True, False)
-
-    def test_search_bins(self):
-        self.assertEqual(True, False)
-
-    def test_search_nn(self):
-        self.assertEqual(True, False)
-
-    def test_get_rand_coordinates(self):
-        self.assertEqual(True, False)
-
-    def test_get_points(self):
-        self.assertEqual(True, False)
-
-    def test_get_point_objects(self):
-        self.assertEqual(True, False)
+    # def test_find_nearest(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_get_total_points(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_search_bins(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_search_nn(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_get_rand_coordinates(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_get_points(self):
+    #     self.assertEqual(True, False)
+    #
+    # def test_get_point_objects(self):
+    #     self.assertEqual(True, False)
 
 
 if __name__ == "__main__":
