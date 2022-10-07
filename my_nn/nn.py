@@ -9,6 +9,7 @@ class Bin:
     """Represents an individual region of the search space or area of the grid. I.e., it's a bin or container to
     hold points found to be located in a given region of space.
     """
+
     def __init__(self, uid=None, coord=None, width=None, length=None, x_min=None, x_max=None, y_min=None, y_max=None):
         self.uid = uid
         self.coord = coord
@@ -29,6 +30,7 @@ class BinSpace:
     """Represents the region of space containing all the index points, and serves as a container for all the regions
     in the search grid, i.e., it holds all the data bins.
     """
+
     def __init__(self, width: tuple, length: tuple, points: list):
         self.length = length
         self.width = width
@@ -77,7 +79,7 @@ class BinSpace:
         return [v for k, v in self.bin_map.items() if v.has_points]
 
     @staticmethod
-    def find_nearest(query_point, points):
+    def find_nearest(query_point: Point, points: list) -> Point:
         """Finds the point closest to query_point, or returns None if no point is found.
 
         Uses standard Cartesian distance formula:
@@ -166,6 +168,7 @@ class BinSpace:
 
 class MyNnIndex:
     """Implements a grid-like search space and an iteratively expanding search."""
+
     def __init__(self, points):
         self.points = points
         self.index = None
